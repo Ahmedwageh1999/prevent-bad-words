@@ -1,9 +1,8 @@
+
+// to get the complete project plesase visit smart server in discord https://discord.gg/cDaeTcMFf3
 client.on('messageCreate' , async message => {
     if (message.author.bot) return ;
-   const words = ['kos' , 'omk' , "" , "" , ""] // here just write bad words 
-
-   if(words.some(w => message.content.includes(w))) {
-    message.delete() //see the tutorial https://youtube.com/shorts/oCqbSi0wQsM?feature=share
+    message.delete() //see the tutorial https://youtube.com/shorts/oCqbSi0wQsM?feature=share 
     const member = message.member;
     message.channel.send({content : `**Dont say that 😒**`}) // here if you want to change the english words to arabic when the person say a bad word 
   
