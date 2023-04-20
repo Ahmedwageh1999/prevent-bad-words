@@ -1,0 +1,14 @@
+client.on('messageCreate' , async message => {
+    if (message.author.bot) return ;
+   const words = ['kos' , 'omk' , "" , "" , ""] // here just write bad words 
+
+   if(words.some(w => message.content.includes(w))) {
+    message.delete() //see the tutorial https://youtube.com/shorts/oCqbSi0wQsM?feature=share
+    const member = message.member;
+    message.channel.send({content : `**Dont say that 😒**`}) // here if you want to change the english words to arabic when the person say a bad word 
+  
+    
+    await member.timeout(60000 )  // here the timeout will be 1 minute if you want to change the time just delete  60000 and write what you love .
+    await member.send({content : `**You are timedout cuz you said bad word**`}) //// here you can change the message which is sent to the dm .
+   }
+}) //// https://youtube.com/shorts/oCqbSi0wQsM?feature=share
